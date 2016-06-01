@@ -1,4 +1,9 @@
 from django.db import models
+from sorl.thumbnail import ImageField
+
+
+class ImageModeratorField(ImageField):
+    pass
 
 
 class ImageModerator(models.Model):
@@ -16,7 +21,7 @@ class ImageModerator(models.Model):
 
     def image_thumb(self):
         if self.img_path:
-            return u'<img src="/static/media/uploads/%s" style="width: 150px;" />' % self.img_path
+            return u'<img src="/static/media/uploads/%s" width="150px" />' % self.img_path
         else:
             return 'No Image Found'
     image_thumb.short_description = 'Image'
@@ -24,7 +29,7 @@ class ImageModerator(models.Model):
 
     def image_medium(self):
         if self.img_path:
-            return u'<img src="/static/media/uploads/%s" style="width: 450px;" />' % self.img_path
+            return u'<img src="/static/media/uploads/%s" width="450px" />' % self.img_path
         else:
             return 'No Image Found'
     image_medium.short_description = 'Image'

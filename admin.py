@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import ImageModerator
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 
 def approve_images(modeladmin, request, queryset):
@@ -18,11 +18,13 @@ class ImageModeratorAdmin(admin.ModelAdmin):
     fields = ('image_medium', 'img_path', 'app_label', 'model',
               'modified_on', 'get_username_from_userid', 'approve_status', )
     readonly_fields = ('image_medium', 'img_path', 'app_label', 'model', 'modified_on', 'get_username_from_userid', )
-    list_filter = ('model', )
+    list_filter = ('model', 'approve_status', )
     actions = (approve_images, reject_images, )
 
     def get_username_from_userid(self, obj):
-        return u'%s' % User.objects.get(pk=obj.modified_by).username
+        User = get_user_model()
+        username = User.objects.get(pk=obj.modified_by).username
+        return u'%s' % username
 
     get_username_from_userid.short_description = 'Modified by'
 
