@@ -24,7 +24,7 @@ Install package dependency::
 	$ pip install sorl-thumbnail
 	$ pip install Pillow
 
-Add 'sorl.thumbnail', 'image_moderator' to your INSTALLED_APPS settings file::
+Add *'sorl.thumbnail'*, *'image_moderator'* to your INSTALLED_APPS settings file::
 
 	INSTALLED_APPS = (
 	    ...
@@ -49,7 +49,7 @@ Add the following urlpattern to your root urls.py file::
 Example
 =======
 
-In your App's models.py, specify image field as <b>ImageModeratorField() instead of models.ImageField()::
+In your App's models.py, specify image field as *ImageModeratorField()* instead of *models.ImageField()*::
 
 	from image_moderator.models import ImageModeratorField
 
@@ -59,5 +59,5 @@ In your App's models.py, specify image field as <b>ImageModeratorField() instead
 
 Now you can call the image API:
 
-Syntax:: http://YOUR_DOMAIN_URL/image_moderator/IMAGE_NAME.jpg/?size=WIDTHxHEIGHT
-Eg:: http://example.com/image_moderator/image.jpg/?size=300x200
+**Syntax:** http://YOUR_DOMAIN_URL/image_moderator/IMAGE_NAME.jpg/?size=WIDTHxHEIGHT
+| **Eg:** http://example.com/image_moderator/image.jpg/?size=300x200
