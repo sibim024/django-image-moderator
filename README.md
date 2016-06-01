@@ -1,4 +1,4 @@
-<B>django_imagemoderator</B>
+#django_imagemoderator
 
 <B>Install package dependency:</B>
 
