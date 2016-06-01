@@ -17,14 +17,15 @@ Django 1.8+
 Installation
 =============
 
-<b>Install package dependency:</b>
+Install package dependency::
 
-$ sudo apt-get install libjpeg-dev
-$ sudo apt-get install libjpeg8-dev
-$ pip install sorl-thumbnail
-$ pip install Pillow
+	$ sudo apt-get install libjpeg-dev
+	$ sudo apt-get install libjpeg8-dev
+	$ pip install sorl-thumbnail
+	$ pip install Pillow
 
-<b>Add 'sorl.thumbnail', 'image_moderator' to your INSTALLED_APPS setting::</b>
+Add 'sorl.thumbnail', 'image_moderator' to your INSTALLED_APPS 
+`settings.py` file::
 
 INSTALLED_APPS = (
     ...
