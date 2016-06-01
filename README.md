@@ -50,5 +50,5 @@ In your App's models.py, specify image field as <b>ImageModeratorField()</b> ins
 
 Now you can call the image API:
 
-http://YOUR_DOMAIN_URL/image_moderator/IMAGE_NAME.jpg/WIDTHxHEIGHT<br>
-<b>Eg:</b> http://example.com/image_moderator/image.jpg/100x100
+http://YOUR_DOMAIN_URL/image_moderator/IMAGE_NAME.jpg/?size=WIDTHxHEIGHT<br>
+<b>Eg:</b> http://example.com/image_moderator/image.jpg/?size=300x200
