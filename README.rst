@@ -24,7 +24,7 @@ $ sudo apt-get install libjpeg8-dev
 $ pip install sorl-thumbnail
 $ pip install Pillow
 
-<b>Add 'sorl.thumbnail', 'image_moderator' to your INSTALLED_APPS setting:</b>
+<b>Add 'sorl.thumbnail', 'image_moderator' to your INSTALLED_APPS setting::</b>
 
 INSTALLED_APPS = (
     ...
