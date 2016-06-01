@@ -1,6 +1,6 @@
-#django_image_moderator
+#django_imagemoderator
 
-django_image_moderator is useful when there is a need to moderate images uploaded from any model. It recognizes image uploads from any model and provides a provision to approve / reject them from the django-admin backend. It also provides an API to view approved images. Rejected images will not be rendered in the API.
+django_imagemoderator is useful when there is a need to moderate images uploaded from any model. It recognizes image uploads from any model and provides a provision to approve / reject them from the django-admin backend. It also provides an API to view approved images. Rejected images will not be rendered in the API.
 
 #Requirements
 <b>django_imagemoderator requires the following:</b>
