@@ -6,6 +6,6 @@
 
 <B>Install Sorl dependency:</B>
 
-```sudo apt-get install libjpeg-dev```
-```sudo apt-get install libjpeg8-dev```
+```sudo apt-get install libjpeg-dev```<br>
+```sudo apt-get install libjpeg8-dev```<br>
 ```pip install --no-cache-dir -I pillow```
