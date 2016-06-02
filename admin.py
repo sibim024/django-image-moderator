@@ -21,11 +21,11 @@ class ImageModeratorAdmin(admin.ModelAdmin):
     list_filter = ('model', 'approve_status', )
     actions = (approve_images, reject_images, )
 
+
     def get_username_from_userid(self, obj):
         User = get_user_model()
         username = User.objects.get(pk=obj.modified_by).username
         return u'%s' % username
-
     get_username_from_userid.short_description = 'Modified by'
 
     def has_add_permission(self, request):

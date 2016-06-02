@@ -17,13 +17,14 @@ class Migration(migrations.Migration):
                 ('img_path', models.CharField(max_length=200, null=True, verbose_name=b'Image path')),
                 ('app_label', models.CharField(max_length=50, null=True)),
                 ('model', models.CharField(max_length=50, null=True)),
-                ('approve_status', models.BooleanField(default=False, verbose_name=b'Approve image')),
+                ('approve_status', models.BooleanField(default=False, verbose_name=b'Image status')),
                 ('modified_on', models.DateTimeField(auto_now=True, null=True)),
                 ('modified_by', models.IntegerField(null=True, blank=True)),
             ],
             options={
                 'db_table': 'image_moderator',
-                'verbose_name': 'Image Moderator',
+                'verbose_name': 'image',
+                'verbose_name_plural': 'images',
             },
         ),
     ]

@@ -43,7 +43,7 @@ Add the following urlpattern to your root urls.py file::
 
 	urlpatterns = [
 	    ...
-	    url(r'^', include('image_moderator.urls'))
+	    url(r'^image_moderator/', include('image_moderator.urls'))
 	]
 
 Example
@@ -54,7 +54,7 @@ In your App's models.py, specify image field as *ImageModeratorField()* instead 
 	from image_moderator.models import ImageModeratorField
 
 	class MyModel(models.Model):
-	    image = ImageModeratorField(upload_to=upload_handler, blank=True, null=True)
+	    image = ImageModeratorField(upload_to="assets/", blank=True, null=True)
 
 
 Now you can call the image API:
