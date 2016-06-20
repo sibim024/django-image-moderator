@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from . import views
+from image_moderator.views import ImageModeratorViewHandler
 
 urlpatterns = [
-    url(r'^(?P<path>.+)/$', views.image_moderator)
+    url(r'^(?P<path>.+)/$', ImageModeratorViewHandler.as_view())
 ]
